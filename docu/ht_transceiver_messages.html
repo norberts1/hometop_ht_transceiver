@@ -1,0 +1,968 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2//EN">
+
+<HTML>
+<HEAD>
+	
+	<META HTTP-EQUIV="CONTENT-TYPE" CONTENT="text/html; charset=utf-8">
+	<TITLE></TITLE>
+	<META NAME="GENERATOR" CONTENT="LibreOffice 3.5  (Linux)">
+	<META NAME="CREATED" CONTENT="20140411;14012700">
+	<META NAME="CHANGED" CONTENT="0;0">
+	<META NAME="Erfasser" CONTENT="junky-zs">
+	
+	<STYLE>
+		<!-- 
+		BODY,DIV,TABLE,THEAD,TBODY,TFOOT,TR,TH,TD,P { font-family:"Verdana"; font-size:x-small }
+		 -->
+	</STYLE>
+	
+</HEAD>
+
+<BODY TEXT="#000000">
+<HR>
+	<P><CENTER>
+		<H1>Übersicht</H1>
+		<A HREF="#table0">Telegramm Struktur</A><BR>
+		<A HREF="#table1">Telegramm-Details</A><BR>
+		<A HREF="#table2">Error-Codes</A><BR>
+		
+	</CENTER></P>
+<HR>
+<A NAME="table0"><H1>Tabelle 1: <EM>Telegramm Struktur</EM></H1></A>
+<TABLE CELLSPACING="0" COLS="4" BORDER="0">
+	<COLGROUP WIDTH="78"></COLGROUP>
+	<COLGROUP WIDTH="135"></COLGROUP>
+	<COLGROUP WIDTH="151"></COLGROUP>
+	<COLGROUP WIDTH="282"></COLGROUP>
+	<TR>
+		<TD COLSPAN=3 HEIGHT="22" ALIGN="LEFT" VALIGN=MIDDLE><B><FONT SIZE=3>ht_transceiver Steuer-Telegramme</FONT></B></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><B><BR></B></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="LEFT"><B><BR></B></TD>
+		<TD ALIGN="LEFT"><B><BR></B></TD>
+		<TD ALIGN="LEFT"><B><BR></B></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><B><BR></B></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="LEFT"><B>Datum:</B></TD>
+		<TD ALIGN="LEFT" SDVAL="40480" SDNUM="1031;0;TT.MM.JJJJ"><B>30.10.2014</B></TD>
+		<TD ALIGN="LEFT"><B><BR></B></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><B><BR></B></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="LEFT"><B>Version:</B></TD>
+		<TD ALIGN="LEFT"><B>0.0.2</B></TD>
+		<TD ALIGN="LEFT"><B><BR></B></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><B><BR></B></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="LEFT"><B><BR></B></TD>
+		<TD ALIGN="LEFT"><B><BR></B></TD>
+		<TD ALIGN="LEFT"><B><BR></B></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><B><BR></B></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="LEFT" BGCOLOR="#E6E6E6"><B>Byte-Nr</B></TD>
+		<TD ALIGN="LEFT" BGCOLOR="#E6E6E6"><B>Bedeutung</B></TD>
+		<TD ALIGN="LEFT" BGCOLOR="#E6E6E6"><B>Werte</B></TD>
+		<TD COLSPAN=6 ALIGN="CENTER" VALIGN=MIDDLE BGCOLOR="#E6E6E6" SDNUM="1031;0;@"><B>Details</B></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDVAL="0" SDNUM="1031;">0</TD>
+		<TD ALIGN="LEFT">Start-Tag</TD>
+		<TD ALIGN="LEFT">#</TD>
+		<TD COLSPAN=6 ALIGN="LEFT" VALIGN=MIDDLE SDNUM="1031;0;@">Telegramm Start-Kennzeichen, fester Wert</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDVAL="1" SDNUM="1031;">1</TD>
+		<TD ALIGN="LEFT">Message-Class</TD>
+		<TD ALIGN="LEFT">!,?,H,E</TD>
+		<TD COLSPAN=6 ALIGN="LEFT" VALIGN=MIDDLE SDNUM="1031;0;@">Typ  des Telegramms</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDVAL="2" SDNUM="1031;">2</TD>
+		<TD ALIGN="LEFT">Detail</TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD COLSPAN=6 ALIGN="LEFT" VALIGN=MIDDLE SDNUM="1031;0;@">Detail des Telegramms</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDVAL="3" SDNUM="1031;">3</TD>
+		<TD ALIGN="LEFT">Option</TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD COLSPAN=6 ALIGN="LEFT" VALIGN=MIDDLE SDNUM="1031;0;@">Option, je nach Telegramm gesetzt</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="35" ALIGN="CENTER" SDVAL="4" SDNUM="1031;">4</TD>
+		<TD ALIGN="LEFT">Length of Payload</TD>
+		<TD ALIGN="LEFT">0 … 55</TD>
+		<TD COLSPAN=6 ALIGN="LEFT" VALIGN=MIDDLE SDNUM="1031;0;@">Länge der nachfolgenden Daten-Bytes. Ist 0 wenn keine Daten-Bytes folgen.</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDVAL="5" SDNUM="1031;">5</TD>
+		<TD ALIGN="LEFT">1. Daten-Byte</TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD COLSPAN=6 ALIGN="LEFT" VALIGN=MIDDLE SDNUM="1031;0;@">Nutz-Daten</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDVAL="6" SDNUM="1031;">6</TD>
+		<TD ALIGN="LEFT">2. Daten-Byte</TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD COLSPAN=6 ALIGN="LEFT" VALIGN=MIDDLE SDNUM="1031;0;@"> „</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDVAL="7" SDNUM="1031;">7</TD>
+		<TD ALIGN="LEFT">3. Daten-Byte</TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD COLSPAN=6 ALIGN="LEFT" VALIGN=MIDDLE SDNUM="1031;0;@"> „</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER">N</TD>
+		<TD ALIGN="LEFT">n. Daten-Byte</TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD COLSPAN=6 ALIGN="LEFT" VALIGN=MIDDLE SDNUM="1031;0;@"> „</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="34" ALIGN="CENTER">N+1</TD>
+		<TD ALIGN="LEFT">CRC (8)</TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD COLSPAN=6 ALIGN="LEFT" VALIGN=MIDDLE SDNUM="1031;0;@">CRC Byte (8Bit CRC), generiert aus Byte 0 bis Byte N. Die CRC wird immer berechnet und als separates Byte angehängt.</TD>
+	</TR>
+</TABLE>
+<!-- ************************************************************************** -->
+<HR>
+<A NAME="table1"><H1>Tabelle 2: <EM>Telegramm-Details</EM></H1></A>
+<TABLE CELLSPACING="0" COLS="13" BORDER="0">
+	<COLGROUP WIDTH="112"></COLGROUP>
+	<COLGROUP WIDTH="214"></COLGROUP>
+	<COLGROUP WIDTH="77"></COLGROUP>
+	<COLGROUP WIDTH="379"></COLGROUP>
+	<COLGROUP SPAN="3" WIDTH="26"></COLGROUP>
+	<COLGROUP WIDTH="67"></COLGROUP>
+	<COLGROUP WIDTH="52"></COLGROUP>
+	<COLGROUP WIDTH="125"></COLGROUP>
+	<COLGROUP SPAN="2" WIDTH="99"></COLGROUP>
+	<COLGROUP WIDTH="102"></COLGROUP>
+	<TR>
+		<TD COLSPAN=4 HEIGHT="23" ALIGN="LEFT" VALIGN=MIDDLE SDNUM="1031;0;@"><B><FONT SIZE=3>ht_transceiver Steuer-Telegramme</FONT></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="RIGHT" SDNUM="1031;0;@"><B><BR></B></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><B><BR></B></TD>
+		<TD ALIGN="LEFT"><B><BR></B></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="RIGHT" SDNUM="1031;0;@"><B>Datum:</B></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><B>30.10.2014</B></TD>
+		<TD ALIGN="LEFT"><B><BR></B></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="RIGHT" SDNUM="1031;0;@"><B>Version:</B></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><B>0.0.2</B></TD>
+		<TD ALIGN="LEFT"><B><BR></B></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="RIGHT" SDNUM="1031;0;@"><B><BR></B></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><B><BR></B></TD>
+		<TD ALIGN="LEFT"><B><BR></B></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+		<TD ALIGN="RIGHT"><B><BR></B></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="RIGHT" BGCOLOR="#E6E6E6" SDNUM="1031;0;@"><B>Telegramme</B></TD>
+		<TD ALIGN="LEFT" BGCOLOR="#E6E6E6" SDNUM="1031;0;@"><B>Bedeutung</B></TD>
+		<TD ALIGN="LEFT" BGCOLOR="#E6E6E6"><B>Direction</B></TD>
+		<TD ALIGN="LEFT" BGCOLOR="#E6E6E6" SDNUM="1031;0;@"><B>Details</B></TD>
+		<TD ALIGN="RIGHT" BGCOLOR="#E6E6E6"><B>B0</B></TD>
+		<TD ALIGN="RIGHT" BGCOLOR="#E6E6E6"><B>B1</B></TD>
+		<TD ALIGN="RIGHT" BGCOLOR="#E6E6E6"><B>B2</B></TD>
+		<TD ALIGN="RIGHT" BGCOLOR="#E6E6E6" SDNUM="1031;0;@"><B>B3</B></TD>
+		<TD ALIGN="RIGHT" BGCOLOR="#E6E6E6"><B>B4</B></TD>
+		<TD ALIGN="RIGHT" BGCOLOR="#E6E6E6"><B>D-Byte 0 | CRC</B></TD>
+		<TD ALIGN="RIGHT" BGCOLOR="#E6E6E6"><B>D-Byte 1</B></TD>
+		<TD ALIGN="RIGHT" BGCOLOR="#E6E6E6"><B>D-Byte x</B></TD>
+		<TD ALIGN="RIGHT" BGCOLOR="#E6E6E6"><B>CRC | Daten</B></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="173" ALIGN="CENTER" SDNUM="1031;0;@">1.1</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">Daten senden auf Bus</TD>
+		<TD ALIGN="LEFT"> →</TD>
+		<TD ALIGN="JUSTIFY" SDNUM="1031;0;@">B3 steht z. Zeit fest auf Wert: (11)hex und ist für: Anzahl maximale- und aktuelles- Paket vorgesehen. Das obere Nibbel ist: maximale Anzahl Pakete, das untere Nibbel ist: das aktuelle Paket. Beispiel: (21)hex → Maximal 2 Pakete und aktuell ist dies das 1. Paket. Zur Zeit wird dieser Wert nicht ausgewertet. Jedes Paket wird mit Antwort 1.2 quittiert.  Maximal 55 Daten-Bytes erlaubt.</TD>
+		<TD ALIGN="RIGHT">#</TD>
+		<TD ALIGN="RIGHT">!</TD>
+		<TD ALIGN="RIGHT">S</TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@">packets</TD>
+		<TD ALIGN="RIGHT">length</TD>
+		<TD ALIGN="RIGHT">Daten B0</TD>
+		<TD ALIGN="RIGHT">Daten B1</TD>
+		<TD ALIGN="RIGHT">Daten Bx</TD>
+		<TD ALIGN="RIGHT">CRC-Byte</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="34" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">B4 gibt die Anzahl der Daten-Bytes (ohne CRC-Byte) an.</TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDNUM="1031;0;@">1.2</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">Antwort auf Senden</TD>
+		<TD ALIGN="LEFT"> ←</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">B3 ist 0, wenn kein Fehler vorhanden ist.</TD>
+		<TD ALIGN="RIGHT">#</TD>
+		<TD ALIGN="RIGHT">!</TD>
+		<TD ALIGN="RIGHT">s</TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@">0</TD>
+		<TD ALIGN="RIGHT" SDVAL="0" SDNUM="1031;">0</TD>
+		<TD ALIGN="RIGHT">CRC-Byte</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="34" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"> ←</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">B3 ist negativ (Wert &gt; 128), wenn ein Fehler aufgetreten ist. Der Wert bestimmt die Fehlerart.</TD>
+		<TD ALIGN="RIGHT">#</TD>
+		<TD ALIGN="RIGHT">!</TD>
+		<TD ALIGN="RIGHT">s</TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@">error</TD>
+		<TD ALIGN="RIGHT" SDVAL="0" SDNUM="1031;">0</TD>
+		<TD ALIGN="RIGHT">CRC-Byte</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="49" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"> ←</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">B3 ist positiv  (Wert &lt; 57), wenn das Telegramm gesendet werden konnte. Es gibt dabei die Anzahl der gesendeten Daten-Bytes + CRC an.</TD>
+		<TD ALIGN="RIGHT">#</TD>
+		<TD ALIGN="RIGHT">!</TD>
+		<TD ALIGN="RIGHT">s</TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@">length</TD>
+		<TD ALIGN="RIGHT" SDVAL="0" SDNUM="1031;">0</TD>
+		<TD ALIGN="RIGHT">CRC-Byte</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="112" ALIGN="CENTER" SDNUM="1031;0;@">2.1</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">Mode einstellen</TD>
+		<TD ALIGN="LEFT"> →</TD>
+		<TD ALIGN="JUSTIFY" SDNUM="1031;0;@">B3 gibt den zu setzenden Arbeits-Mode an. Diese Einstellung wird durch einen HW-Reset auf die Konfigurationswerte zurückgesetzt. Dieses Kommando wird mit Telegramm: 2.2 quittiert. (Hinweis: Kommandos an den ht_transceiver müssen immer mit Header gesendet werden.)</TD>
+		<TD ALIGN="RIGHT">#</TD>
+		<TD ALIGN="RIGHT">!</TD>
+		<TD ALIGN="RIGHT">M</TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@">mode</TD>
+		<TD ALIGN="RIGHT" SDVAL="0" SDNUM="1031;">0</TD>
+		<TD ALIGN="RIGHT">CRC-Byte</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="JUSTIFY" SDNUM="1031;0;@">Werte für Mode (B3):</TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="34" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"> →</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">D0:=0 → OFF, keine Busdaten-Übertragung an Master, kein senden von Busdaten auf dem HT-Bus.</TD>
+		<TD ALIGN="RIGHT">#</TD>
+		<TD ALIGN="RIGHT">!</TD>
+		<TD ALIGN="RIGHT">M</TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@">0</TD>
+		<TD ALIGN="RIGHT" SDVAL="0" SDNUM="1031;">0</TD>
+		<TD ALIGN="RIGHT">CRC-Byte</TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="34" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"> →</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">D0:=1 → HEAD, Busdaten-Übertragung an Master (mit Header), kein Senden von Busdaten auf dem HT-Bus.</TD>
+		<TD ALIGN="RIGHT">#</TD>
+		<TD ALIGN="RIGHT">!</TD>
+		<TD ALIGN="RIGHT">M</TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@">1</TD>
+		<TD ALIGN="RIGHT" SDVAL="0" SDNUM="1031;">0</TD>
+		<TD ALIGN="RIGHT">CRC-Byte</TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="34" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"> →</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">= (F0)h → RESET, Reset des HT-transceivers. Telegramm wird nicht quittiert.</TD>
+		<TD ALIGN="RIGHT">#</TD>
+		<TD ALIGN="RIGHT">!</TD>
+		<TD ALIGN="RIGHT">M</TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@">(F0)h</TD>
+		<TD ALIGN="RIGHT" SDVAL="0" SDNUM="1031;">0</TD>
+		<TD ALIGN="RIGHT">CRC-Byte</TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="JUSTIFY" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDNUM="1031;0;@">2.2</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">Antwort auf: Mode einstellen</TD>
+		<TD ALIGN="LEFT"> ←</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">B3 ist 0, wenn kein Fehler vorhanden ist.</TD>
+		<TD ALIGN="RIGHT">#</TD>
+		<TD ALIGN="RIGHT">!</TD>
+		<TD ALIGN="RIGHT">m</TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@">0</TD>
+		<TD ALIGN="RIGHT" SDVAL="0" SDNUM="1031;">0</TD>
+		<TD ALIGN="RIGHT">CRC-Byte</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="34" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"> ←</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">B3 ist negativ (Wert &gt; 128), wenn ein Fehler aufgetreten ist. Der Wert bestimmt die Fehlerart.</TD>
+		<TD ALIGN="RIGHT">#</TD>
+		<TD ALIGN="RIGHT">!</TD>
+		<TD ALIGN="RIGHT">m</TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@">error</TD>
+		<TD ALIGN="RIGHT" SDVAL="0" SDNUM="1031;">0</TD>
+		<TD ALIGN="RIGHT">CRC-Byte</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="88" ALIGN="CENTER" SDNUM="1031;0;@">3.1</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">Konfiguration einstellen</TD>
+		<TD ALIGN="LEFT"> →</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">B3 bestimmt welcher Konfigurations-Anteile eingestellt werden sollen. Die Werte werden im EEProm abgelegt und sind erst nach einem HW-Reset aktiv.</TD>
+		<TD ALIGN="RIGHT">#</TD>
+		<TD ALIGN="RIGHT">!</TD>
+		<TD ALIGN="RIGHT">C</TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@">Konfig</TD>
+		<TD ALIGN="RIGHT">length</TD>
+		<TD ALIGN="RIGHT">Daten Byte 0</TD>
+		<TD ALIGN="RIGHT"> …</TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="JUSTIFY" SDNUM="1031;0;@">Werte für Konfig (B3):</TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="34" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"> →</TD>
+		<TD ALIGN="JUSTIFY" SDNUM="1031;0;@">B3:=1 → System-Startmode.  D0 ist der Konfigurations-Wert.</TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="34" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"> →</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">D0:=0 → OFF, keine Busdaten-Übertragung an Master, kein senden von Busdaten auf dem HT-Bus.</TD>
+		<TD ALIGN="RIGHT">#</TD>
+		<TD ALIGN="RIGHT">!</TD>
+		<TD ALIGN="RIGHT">C</TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@">1</TD>
+		<TD ALIGN="RIGHT" SDVAL="1" SDNUM="1031;">1</TD>
+		<TD ALIGN="RIGHT" SDVAL="0" SDNUM="1031;">0</TD>
+		<TD ALIGN="RIGHT">CRC-Byte</TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="34" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"> →</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">D0:=1 → HEAD, Busdaten-Übertragung an Master (mit Header), kein Senden von Busdaten auf dem HT-Bus.</TD>
+		<TD ALIGN="RIGHT">#</TD>
+		<TD ALIGN="RIGHT">!</TD>
+		<TD ALIGN="RIGHT">C</TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@">1</TD>
+		<TD ALIGN="RIGHT" SDVAL="1" SDNUM="1031;">1</TD>
+		<TD ALIGN="RIGHT" SDVAL="1" SDNUM="1031;">1</TD>
+		<TD ALIGN="RIGHT">CRC-Byte</TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="49" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"> →</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">D0:=2 → TX, Senden von Busdaten auf dem HT-Bus, Busdaten-Übertragung an Master im RAW-Format (ohne Header).</TD>
+		<TD ALIGN="RIGHT">#</TD>
+		<TD ALIGN="RIGHT">!</TD>
+		<TD ALIGN="RIGHT">C</TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@">1</TD>
+		<TD ALIGN="RIGHT" SDVAL="1" SDNUM="1031;">1</TD>
+		<TD ALIGN="RIGHT" SDVAL="2" SDNUM="1031;">2</TD>
+		<TD ALIGN="RIGHT">CRC-Byte</TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="34" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"> →</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">D0:=3 → HEADTX, Busdaten-Übertragung an Master (mit Header), Senden von Busdaten auf dem HT-Bus. </TD>
+		<TD ALIGN="RIGHT">#</TD>
+		<TD ALIGN="RIGHT">!</TD>
+		<TD ALIGN="RIGHT">C</TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@">1</TD>
+		<TD ALIGN="RIGHT" SDVAL="1" SDNUM="1031;">1</TD>
+		<TD ALIGN="RIGHT" SDVAL="3" SDNUM="1031;">3</TD>
+		<TD ALIGN="RIGHT">CRC-Byte</TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="JUSTIFY" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="34" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="JUSTIFY" SDNUM="1031;0;@">B3:=2 → Transceiver Bus-Geräteadresse. D0 ist die Geräteadresse.</TD>
+		<TD ALIGN="RIGHT">#</TD>
+		<TD ALIGN="RIGHT">!</TD>
+		<TD ALIGN="RIGHT">C</TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@">2</TD>
+		<TD ALIGN="RIGHT" SDVAL="1" SDNUM="1031;">1</TD>
+		<TD ALIGN="RIGHT">xy</TD>
+		<TD ALIGN="RIGHT">CRC-Byte</TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="90" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">Unzulässige Werte werden  nicht übernommen und mit Fehler quittiert. Werte hängen vom Bus-System ab. !!!!!!! Achtung !!!!!!! Änderung der Default-Adresse kann zu Problemen am HT-Bus führen.</TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="34" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="JUSTIFY" SDNUM="1031;0;@">Heatronic Wertebereich: (0a…7F)hex. Default-Wert ist (0d)hex.</TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="JUSTIFY" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="34" ALIGN="CENTER" SDNUM="1031;0;@">3.2</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">Antwort auf Konfigurationseinstellung</TD>
+		<TD ALIGN="LEFT"> ←</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">B3 ist 0, wenn kein Fehler vorhanden ist.</TD>
+		<TD ALIGN="RIGHT">#</TD>
+		<TD ALIGN="RIGHT">!</TD>
+		<TD ALIGN="RIGHT">c</TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@">0</TD>
+		<TD ALIGN="RIGHT" SDVAL="0" SDNUM="1031;">0</TD>
+		<TD ALIGN="RIGHT">CRC-Byte</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="34" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"> ←</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">B3 ist negativ (Wert &gt; 128), wenn ein Fehler aufgetreten ist. Der Wert bestimmt die Fehlerart.</TD>
+		<TD ALIGN="RIGHT">#</TD>
+		<TD ALIGN="RIGHT">!</TD>
+		<TD ALIGN="RIGHT">c</TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@">error</TD>
+		<TD ALIGN="RIGHT" SDVAL="0" SDNUM="1031;">0</TD>
+		<TD ALIGN="RIGHT">CRC-Byte</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+		<TD ALIGN="RIGHT"> -</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="34" ALIGN="CENTER" SDNUM="1031;0;@">4.1</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">Konfigurationswerte abfragen</TD>
+		<TD ALIGN="LEFT"> →</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">B3 bestimmt welcher Konfigurations-Anteil abgefragt werden soll. </TD>
+		<TD ALIGN="RIGHT">#</TD>
+		<TD ALIGN="RIGHT">?</TD>
+		<TD ALIGN="RIGHT">C</TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@">Konfig</TD>
+		<TD ALIGN="RIGHT" SDVAL="0" SDNUM="1031;">0</TD>
+		<TD ALIGN="RIGHT">CRC-Byte</TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="64" ALIGN="CENTER" SDNUM="1031;0;@">4.2</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">Antwort auf: Konfigurations-Werte abfragen</TD>
+		<TD ALIGN="LEFT"> ←</TD>
+		<TD ALIGN="JUSTIFY" SDNUM="1031;0;@">D0 gibt den aktuell eingestellten Konfigurations-Wert an, der zu der in B3 angegebenen Konfiguration gehört. Ungültige Konfigurations-Werte werden mit (0xff)h zurückgegeben.</TD>
+		<TD ALIGN="RIGHT">#</TD>
+		<TD ALIGN="RIGHT">?</TD>
+		<TD ALIGN="RIGHT">c</TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@">Konfig</TD>
+		<TD ALIGN="RIGHT" SDVAL="1" SDNUM="1031;">1</TD>
+		<TD ALIGN="LEFT">0 … 3 bzw. xy</TD>
+		<TD ALIGN="RIGHT">CRC-Byte</TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="137" ALIGN="CENTER" SDNUM="1031;0;@">5.1</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">Bus-Telegramm Ausgabe für Heatronic Telegramme (Junkers)</TD>
+		<TD ALIGN="LEFT"> ←</TD>
+		<TD ALIGN="JUSTIFY" SDNUM="1031;0;@">B3 steht z. Zeit fest auf Wert: (11)hex und ist für: Anzahl maximale- und aktuelles- Paket vorgesehen. Das obere Nibbel ist: maximale Anzahl Pakete, das untere Nibbel ist: das aktuelle Paket. Beispiel: (21)hex → Maximal 2 Pakete und aktuell ist dies das 1. Paket. Zur Zeit wird dieser Wert nicht ausgewertet. Eine Quittierung ist nicht erforderlich. Maximal 55 Daten-Bytes erlaubt.</TD>
+		<TD ALIGN="RIGHT">#</TD>
+		<TD ALIGN="RIGHT">H</TD>
+		<TD ALIGN="RIGHT">R</TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@">packets</TD>
+		<TD ALIGN="RIGHT">length</TD>
+		<TD ALIGN="RIGHT">Daten Byte 0</TD>
+		<TD ALIGN="RIGHT">Daten Byte 1</TD>
+		<TD ALIGN="RIGHT">Daten Byte x</TD>
+		<TD ALIGN="RIGHT">CRC-Byte</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDNUM="1031;0;@">5.2</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">Antwort entfällt</TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="42" ALIGN="CENTER" SDNUM="1031;0;@">6.1</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">Bus-Telegramm Ausgabe für EMS Telegramme (Bosch)</TD>
+		<TD ALIGN="LEFT"> ←</TD>
+		<TD ALIGN="JUSTIFY" SDNUM="1031;0;@">TBD</TD>
+		<TD ALIGN="RIGHT">#</TD>
+		<TD ALIGN="RIGHT">E</TD>
+		<TD ALIGN="RIGHT">R</TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@">packets</TD>
+		<TD ALIGN="RIGHT">length</TD>
+		<TD ALIGN="RIGHT">Daten Byte 0</TD>
+		<TD ALIGN="RIGHT">Daten Byte 1</TD>
+		<TD ALIGN="RIGHT">Daten Byte x</TD>
+		<TD ALIGN="RIGHT">CRC-Byte</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="CENTER" SDNUM="1031;0;@">6.2</TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@">Antwort entfällt</TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT" SDNUM="1031;0;@"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+		<TD ALIGN="RIGHT"><BR></TD>
+	</TR>
+</TABLE>
+<!-- ************************************************************************** -->
+<HR>
+<A NAME="table2"><H1>Tabelle 3: <EM>Error-Codes</EM></H1></A>
+<TABLE CELLSPACING="0" COLS="3" BORDER="0">
+	<COLGROUP WIDTH="85"></COLGROUP>
+	<COLGROUP WIDTH="258"></COLGROUP>
+	<COLGROUP WIDTH="168"></COLGROUP>
+	<TR>
+		<TD COLSPAN=4 HEIGHT="27" ALIGN="LEFT" VALIGN=MIDDLE SDNUM="1031;0;@"><B><FONT SIZE=3>ht_transceiver Steuer-Telegramme</FONT></B></TD>
+		</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="RIGHT" SDNUM="1031;0;@"><B><BR></B></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><B><BR></B></TD>
+		<TD ALIGN="LEFT"><B><BR></B></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="RIGHT" SDNUM="1031;0;@"><B>Datum:</B></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><B>30.10.2014</B></TD>
+		<TD ALIGN="LEFT"><B><BR></B></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="RIGHT" SDNUM="1031;0;@"><B>Version:</B></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><B>0.0.2</B></TD>
+		<TD ALIGN="LEFT"><B><BR></B></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="RIGHT" SDNUM="1031;0;@"><B><BR></B></TD>
+		<TD ALIGN="LEFT" SDNUM="1031;0;@"><B><BR></B></TD>
+		<TD ALIGN="LEFT"><B><BR></B></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="LEFT" BGCOLOR="#E6E6E6">Errorcode</TD>
+		<TD ALIGN="LEFT" BGCOLOR="#E6E6E6">Bedeutung</TD>
+		<TD ALIGN="LEFT" BGCOLOR="#E6E6E6">Kürzel (define)</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="RIGHT" SDVAL="0" SDNUM="1031;">0</TD>
+		<TD ALIGN="LEFT">Kein Fehler vorhanden</TD>
+		<TD ALIGN="LEFT">ERR_NONE</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="RIGHT" SDVAL="-1" SDNUM="1031;">-1</TD>
+		<TD ALIGN="LEFT">Allgemeiner Fehler, keine Details</TD>
+		<TD ALIGN="LEFT">ERR_COMMON</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="RIGHT" SDVAL="-2" SDNUM="1031;">-2</TD>
+		<TD ALIGN="LEFT">Falsches Start-Byte (Start-Tag)</TD>
+		<TD ALIGN="LEFT">ERR_WRONG_TAG</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="RIGHT" SDVAL="-3" SDNUM="1031;">-3</TD>
+		<TD ALIGN="LEFT">Falscher Wert im Telegramm</TD>
+		<TD ALIGN="LEFT">ERR_WRONG_VALUE</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="RIGHT" SDVAL="-4" SDNUM="1031;">-4</TD>
+		<TD ALIGN="LEFT">Unbekanntes Telegramm</TD>
+		<TD ALIGN="LEFT">ERR_WRONG_MSG</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="RIGHT" SDVAL="-10" SDNUM="1031;">-10</TD>
+		<TD ALIGN="LEFT">Empfangsbuffer voll</TD>
+		<TD ALIGN="LEFT">ERR_BUFFER_FULL</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="RIGHT" SDVAL="-11" SDNUM="1031;">-11</TD>
+		<TD ALIGN="LEFT">CRC – Fehler des Telegramms</TD>
+		<TD ALIGN="LEFT">ERR_CRC</TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+		<TD ALIGN="LEFT"><BR></TD>
+	</TR>
+	<TR>
+		<TD HEIGHT="19" ALIGN="RIGHT" SDVAL="-20" SDNUM="1031;">-20</TD>
+		<TD ALIGN="LEFT">Fehler bei Konfigurations-Speichern</TD>
+		<TD ALIGN="LEFT">ERR_CFG_WRITE</TD>
+	</TR>
+</TABLE>
+<!-- ************************************************************************** -->
+</BODY>
+
+</HTML>
