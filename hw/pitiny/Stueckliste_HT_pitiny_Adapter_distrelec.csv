@@ -1,0 +1,22 @@
+Quantity;Distrelec Article Number;Manufacturer;Manufacturer Article Number;Name;
+1;14370854;Fischer Elektronik;BL 2/26 Z;Buchsenleiste   2 x13P;
+2;17520408;Fairchild;H11L1M;Optokoppler 1 MBit/s DIL-6;
+1;14835401;Phoenix Contact;MPT 0,5/2-2,54;Printklemme   2 P2.54 mm;
+1;11052434;Welwyn;PCF0603R-10KBT1;Widerstand SMD 10 kOhm   0.1  % 0603;
+6;16025339;Panasonic Automotive & Industrial Systems;ERJP03F1001V;Widerstand SMD 1 kOhm  ±  1 % 0603;
+5;16031983;KOA;RN731JTTD4701B25;Widerstand SMD 4.7 kOhm 0603  ±  0.1 %;
+4;16019483;KOA;RK73H2BTTD9100F;Widerstand SMD 910 Ohm  ±  1 %;
+4;17000818;Diotec;BAT54S;Schottkydiode   200  mA SOT-23;
+3;17130446;NXP;BC847C;Transistor SOT-23 NPN 45 V   100  mA;
+1;17100647;NXP;BC807-40;Transistor SOT-23 PNP -45 V   -500  mA;
+1;17030117;No Brand;BZX84/C4V7;Zenerdiode SOT-23 4.7 V;
+1;17030299;No Brand;BZX84/C9V1;Zenerdiode SOT-23 9.1 V;
+1;17518636;Osram Semiconductors;LSL29K-G1J2-1;SMD-LED rot 1.7 V 0603;
+1;17518634;Osram Semiconductors;LGL29K-F2J1-24;SMD-LED grün 1.7 V 0603;
+1;16575740;Kemet;C0603C152K5RAC C-7013;Kondensator SMD   1.5  nF   50  VDC 0603;
+2;16575471;Murata;GRM1885C1H220JA01D;Kondensator SMD   22  pF   50  VDC 0603;
+3;16572419;Kemet;C0805C104K5RACTU;Kondensator SMD   100  nF   50  VDC 0805;
+1;16572398;Kemet;C0805C680J5GAC;Kondensator SMD   68  pF   50  VDC 0805;
+1;17452800;auris;Q-10,00000M-HC49USSMD;Quarz 10 MHz;
+;;;;;
+1; –;Atmel;ATtiny841;;Mouser / Büchner
