@@ -1,0 +1,61 @@
+Programming the ht_pitiny-board with 'avrdude'-tool on Raspberry Pi(R)
+
+Date: 22.03.2015
+Rev : 0.2
+
+1. First you need that tool 'avrdude' if it's not already available
+1.1 check availability:   avrdude -h
+  some help-return must be available, else the tool isn't installed
+
+1.2 Installation of that tool 'avrdude' for the Raspberr Pi
+   Doing that things written on web-site
+    URL: https://projects.drogon.net/raspberry-pi/gertboard/arduino-ide-installation-isp/
+      File is available under:
+       URL: http://project-downloads.drogon.net/files/avrdude_5.10-4_armhf.deb
+
+   or install the tool with following commands (on Raspbian):
+    cd /tmp
+    wget http://project-downloads.drogon.net/gertboard/avrdude_5.10-4_armhf.deb
+    sudo dpkg -i avrdude_5.10-4_armhf.deb
+    sudo chmod 4755 /usr/bin/avrdude
+
+1.3 Installation for the ATtiny841 avrdude addon, if not available
+1.3.1 Check at first availability:
+    call: sudo avrdude -n -v -pattiny841 -cgpio
+    If the answer has that content 
+       -->> avrdude: AVR Part "attiny841" not found
+    then you have to install that addon
+
+1.3.2 Installation AVR Part "attiny841" addon:
+	download that addon (avrdude_addon_attiny841.conf.tar.gz) from:
+		https://www.mikrocontroller.net/topic/317004#3959288
+	to /tmp and extract this with:
+		tar xzvf avrdude_addon_attiny841.conf.tar.gz
+
+	Then add this file to the end of global avrdude.cfg file with:
+		sudo su
+		cat ./avrdude_addon_attiny841.conf >>/etc/avrdude.conf
+
+2.0 Verify currently programmed ht_pitiny
+  (make sure to have the latest version from github.com-->> https://github.com/norberts1/hometop_ht_transceiver.git)
+2.1 For verifing the flash-content do
+			avrdude -v -pattiny841 -cgpio -Uflash:v:pitiny.hex
+		check the result
+
+2.2 For verifing the EEPROM do
+			avrdude -v -pattiny841 -cgpio -Ueeprom:v:pitiny.eep
+		check the result
+
+3.0 Programm the ht_pitiny - Board with a new release
+3.1 For programming the flash-content do
+			avrdude -v -pattiny841 -cgpio -Uflash:w:pitiny.hex
+		check the result
+
+3.2 For programming the EEPROM do
+			avrdude -v -pattiny841 -cgpio -Ueeprom:w:pitiny.eep
+		check the result
+
+
+
+
+
