@@ -1,22 +1,22 @@
-Quantity;Distrelec Article Number;Reference;Manufacturer;Manufacturer Article Number;Name;Kommentar
-2;17520408;;Fairchild;H11L1M;Optokoppler 1 MBit/s DIL-6;
-6;16005490;;No Brand;RD18JN102T52;Kohleschicht-Widerstand 1 kOhm  ±  5 %;using 1/8Watt as small as possible
-2;16005573;;No Brand;RD18JN472T52;Kohleschicht-Widerstand 4.7 kOhm  ±  5 %;using 1/8Watt as small as possible
-1;14835401;;Phoenix Contact;MPT 0,5/2-2,54;Printklemme   2 P2.54 mm;
-1;17005374;;No Brand;BZX55/C4V7;Zenerdiode DO-35 4.7 V 500 mW;
-1;17005440;;No Brand;BZX55/C9V1;Zenerdiode DO-35 9.1 V 500 mW;
-6;17028822;;No Brand;BAT46;Schottkydiode   150  mA DO-35;
-4;16577304;;Murata;RDER71H104K0S1C03A;Kondensator   100  nF   50  VDC 2.54 mm;
-2;16584858;;Hitano;TCH2A220J-S265B;Kondensator   22  pF   100  VDC 2.5 mm;
-1;16586226;;Hitano;TCH2A680J-S565B-ROHS;Kondensator   68  pF   100  VDC 5 mm;
-1;16585194;;Hitano;HB2A102K-S265B-ROHS;Kondensator   1  nF   100  VDC 2.5 mm;
-1;16059882;;Vishay;MBE04140C2200FC100;Widerstand 220 Ohm   1  W  ±  1 %;
-1;11047183;;Arcol;MRA0207 10K B 15PPM TA;Widerstand 10 kOhm   0.25  W  ±  0.1 %;using 1/8Watt as small as possible
-1;14370854;;Fischer Elektronik;BL 2/26 Z;Buchsenleiste   2 x13P;
-1;17101461;;No Brand;BC547C;Transistor TO-92 NPN 45 V;
-1;17101457;;No Brand;BC327-40;Transistor TO-92 PNP -45 V;
-1;17500606;;Everlight Electronics;204-10 SURD/S530-A3;LED 3 mm (T1) rot;
-1;17500614;;Everlight Electronics;204-10SYGD/S530-E2;LED 3 mm (T1) grün;
-1;17452832;;Auris;Q-16,00000M-HC49US-F-30-30-D32;Quarz 16 MHz;
+Quantity;Distrelec Article Number;Reference;Manufacturer;Manufacturer Article Number;Name;Comment
+2;17520408;U1,U2;Fairchild;H11L1M;Optokoppler 1 MBit/s DIL-6;
+6;16005490;R1,R3,R4,R6,R7,R8;No Brand;RD18JN102T52;Kohleschicht-Widerstand 1 kOhm  ±  5 %;using 1/8Watt as small as possible
+2;16005573;R2,R5;No Brand;RD18JN472T52;Kohleschicht-Widerstand 4.7 kOhm  ±  5 %;using 1/8Watt as small as possible
+1;14835401;HT3 Bus;Phoenix Contact;MPT 0,5/2-2,54;Printklemme   2 P2.54 mm;
+1;17005374;D7;No Brand;BZX55/C4V7;Zenerdiode DO-35 4.7 V 500 mW;
+1;17005440;D5;No Brand;BZX55/C9V1;Zenerdiode DO-35 9.1 V 500 mW;
+6;17028822;D1-D4,D6,D10;No Brand;BAT46;Schottkydiode   150  mA DO-35;
+4;16577304;C5-C8;Murata;RDER71H104K0S1C03A;Kondensator   100  nF   50  VDC 2.54 mm;
+2;16584858;C3,C4;Hitano;TCH2A220J-S265B;Kondensator   22  pF   100  VDC 2.5 mm;
+1;16586226;C2;Hitano;TCH2A680J-S565B-ROHS;Kondensator   68  pF   100  VDC 5 mm;
+1;16585194;C1;Hitano;HB2A102K-S265B-ROHS;Kondensator   1  nF   100  VDC 2.5 mm;
+1;16059882;R9;Vishay;MBE04140C2200FC100;Widerstand 220 Ohm   1  W;using 1Watt as small as possible
+1;11047183;R11;Arcol;MRA0207 10K B 15PPM TA;Widerstand 10 kOhm   0.25  W  ±  0.1 %;using 1/8Watt as small as possible
+1;14370854;J1;Fischer Elektronik;BL 2/26 Z;Buchsenleiste   2 x13P;
+1;17101461;Q1;No Brand;BC547C;Transistor TO-92 NPN 45 V;
+1;17101457;Q2;No Brand;BC327-40;Transistor TO-92 PNP -45 V;
+1;17500606;D8;Everlight Electronics;204-10 SURD/S530-A3;LED 3 mm (T1) rot;
+1;17500614;D9;Everlight Electronics;204-10SYGD/S530-E2;LED 3 mm (T1) grün;
+1;17452832;Q3;Auris;Q-16,00000M-HC49US-F-30-30-D32;Quarz 16 MHz;
 ;;;;;;
-1; ----;;;ATMEGA 328P-PU;Atmel uProcessor 8 Bit;Reichelt
+1; ----;U3;Atmel;ATMEGA 328P-PU;Atmel uProcessor 8 Bit;at Reichelt
