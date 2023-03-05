@@ -7,7 +7,7 @@ HW- and SW-parts to receive/transmit seriell data from/to heating-system.
 - [Introduction](#intro)
 - [Used Hardware](#hardware)
 - [Software](#software)
-- [Software Installation](#software installation)
+- [Software Installation](#softwareinstallation)
 - [Documentation](#docu)
 - [License](#license)
 
@@ -91,7 +91,7 @@ The **software** is written in **c and cpp** and designed for receiving and tran
 </table>
 
 
-## Software Installation<a name="software installation"></a>
+## Software Installation<a name="softwareinstallation"></a>
 
 ### Preconditions:
 
