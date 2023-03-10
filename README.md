@@ -90,6 +90,7 @@ The **software** is written in **c and cpp** and designed for receiving and tran
 </tr>
 </table>
 
+SW-Release generation is done with: Atmel Studio 7 (Version: 7.0.2397), but any leater Revision should work.
 
 ## Software Installation<a name="softwareinstallation"></a>
 
@@ -124,8 +125,8 @@ Call the installaton-script for:
 </tr>
 <tr>
     <td>ht_piduino</td>
-    <td>TBD</td>
-    <td></td>
+    <td>prepare_piduino_board.sh</td>
+    <td>1.check platform.<br>2.check SPI-IF.<br>3.Install and compile avrdude if not already done.<br>4.Setup fuses.<br>5.Flash latest sw-release.<br>6.Write eeprom-data.</td>
 </tr>
 </table>  
 
@@ -133,7 +134,7 @@ Call the installaton-script for:
 
 - Check the output on the installation-terminal for any errors.  
 - Check the green flashing LED on the 'ht_transceiver-board'. If no flashing LED is visable, some errors had occurred.
-- Switch off RaspberryPi and reconnect the ht_transceiver-board' to the heater-bus.
+- Switch off RaspberryPi and reconnect the 'ht_transceiver-board' to the heater-bus.
 
 ## Documentation<a name="docu"></a>
 
