@@ -23,6 +23,10 @@
 #
 # check platform (e.g. Raspberry Pi) for sw-update.
 #   only Embedded Linux platforms are allowed.
+
+# save current path
+running_path=$(pwd)
+
 echo "------------------------------------------------------------------------------------"
 echo "Check platform type";
 machine=$(uname -m)
@@ -82,7 +86,6 @@ else
  fi
 fi
 
-cd
 echo "------------------------------------------------------------------------------------"
 echo "Load software to 'ht_piduino-board' (setting fuses, flash and eeprom)"
 echo "------------------------------------------------------------------------------------"
@@ -91,10 +94,11 @@ if [ -f  ~/HT3/sw/etc/sysconfig/spi_clk_on.py ]; then
   sudo ./spi_clk_on.py
 fi
 
+cd ${running_path}
+
 echo "  1. Set fuses to values: Ext=FF;High=D2;Low=E7"
 sudo avrdude -p ATmega328P -c linuxgpio -C +RPi_gpio.conf -U lfuse:w:0xE7:m -U hfuse:w:0xD2:m -U efuse:w:0xFF:m
 
-cd
 echo "  ----------------------------------------------------------------------------------"
 echo "  2. Get latest sw-release from github.com"
 # remove old versions

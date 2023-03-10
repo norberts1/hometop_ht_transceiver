@@ -21,10 +21,15 @@
  # Ver:0.1    /Datum 09.01.2016
  # Ver:0.2    /Datum 04.03.2023 update for 'linuxgpio'-port and installation-
  #                              handling.
+ # Ver:0.3    /Datum 09.03.2023 path-correction
  #################################################################
 #
 # check platform (e.g. Raspberry Pi) for sw-update.
 #   only Embedded Linux platforms are allowed.
+
+# save current path
+running_path=$(pwd)
+
 echo "------------------------------------------------------------------------------------"
 echo "Check platform type";
 machine=$(uname -m)
@@ -84,7 +89,6 @@ else
  fi
 fi
 
-cd ~/
 echo "------------------------------------------------------------------------------------"
 echo "Load software to 'ht_pitiny-board' (setting fuses, flash and eeprom)"
 echo "------------------------------------------------------------------------------------"
@@ -93,15 +97,16 @@ if [ -f  ~/HT3/sw/etc/sysconfig/spi_clk_on.py ]; then
   sudo ./spi_clk_on.py
 fi
 
+cd ${running_path}
+
 echo "  1. Set fuses to values: Ext=F5;High=D5;Low=EE"
 sudo avrdude -p ATtiny841 -c linuxgpio -C +RPi_gpio.conf -U lfuse:w:0xEE:m -U hfuse:w:0xD5:m -U efuse:w:0xF5:m
 
-cd ~/
 echo "  ----------------------------------------------------------------------------------"
 echo "  2. Get latest sw-release from github.com"
 # remove old versions
- rm ./pitiny.hex >/dev/null
- rm ./pitiny.eep >/dev/null
+ rm -f ./pitiny.hex
+ rm -f ./pitiny.eep
 # get current versions
 wget https://github.com/norberts1/hometop_ht_transceiver/raw/master/sw/pitiny/pitiny/Release/pitiny.hex
 wget https://github.com/norberts1/hometop_ht_transceiver/raw/master/sw/pitiny/pitiny/Release/pitiny.eep
